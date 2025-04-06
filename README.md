@@ -35,3 +35,23 @@ npx prisma init --datasource-provider sqlite `\
 ├── .env               # Database config
 └── package.json
 ```
+### 3. Configuration
+.env File:
+```
+DATABASE_URL="file:./prisma/dev.db"
+```
+
+### 4. Database Setup
+```bash 
+# Create database tables
+npx prisma migrate dev --name init
+
+# Generate Prisma Client
+npx prisma generate
+```
+
+
+### 5. Run Project
+```bash
+npm run dev  # Starts server with nodemon
+```
